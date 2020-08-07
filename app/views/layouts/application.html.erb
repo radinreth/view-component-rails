@@ -15,5 +15,17 @@
     <%= render(ExampleComponent.new(title: "Ruby on Rails!", description: "Principle of Least Surprise!")) do %>
       Hello, World!
     <% end %>
+
+    <hr />
+
+    <%= render(ModalComponent.new) do |component| %>
+      <% component.with(:header) do %>
+        Hello Radin,
+      <% end %>
+
+      <% component.with(:body) do %>
+        Have a good day!
+      <% end %>
+    <% end %>
   </body>
 </html>
