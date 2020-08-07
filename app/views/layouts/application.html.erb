@@ -11,5 +11,9 @@
 
   <body>
     <%= yield %>
+
+    <%= render(ExampleComponent.new(title: "Ruby on Rails!", description: "Principle of Least Surprise!")) do %>
+      Hello, World!
+    <% end %>
   </body>
 </html>
